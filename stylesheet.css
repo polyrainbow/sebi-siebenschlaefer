@@ -1,0 +1,141 @@
+:root {
+  --background-color: #d8d5af;
+  --accent-color: #5e41d5;
+  --main-color: #19232c;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces';
+  font-weight: bold;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+p, a, span {
+  font-family: 'Fraunces';
+}
+
+#page-title {
+  font-size: 3.6em;
+  margin: 0;
+}
+
+@media only screen and (max-width: 390px){
+  #page-title{
+    font-size: 2.2em;
+  }
+}
+
+iframe{
+   border: 0;
+   max-width: 1000px;
+   height: 671px;
+}
+
+main, footer {
+  margin: 20px 0px;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--main-color);
+}
+
+
+#album-img-container{
+  margin: auto;
+  margin-bottom: 10px;
+
+  img {
+    max-width: min(100%, 500px);
+    height: auto;
+  }
+}
+
+audio {
+ display: none;
+}
+
+#play-album-button {
+  font-size: xx-large;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--accent-color);
+  color: #FFFFFF;
+  font-family: 'Fraunces';
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .track {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .main {
+      display: flex;
+      gap: 10px;
+
+      button {
+        width: 30px;
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        color: white;
+        background: var(--accent-color);
+        border: none;
+        border-radius: 50px;
+
+        span {
+          font-size: 26px;
+          line-height: 0.8em;
+          align-self: center;
+        }
+      }
+    
+      h3 {
+        margin: 0;
+        font-size: x-large;
+      }
+    }
+
+    .player-ui {
+      display: flex;
+      flex-direction: column;
+
+      .time {
+        font-size: 24px;
+        width: 350px;
+        text-align: center;
+      }
+
+      .progress-bar {
+        width: 350px;
+        height: 15px;
+        background-color: white;
+        border-radius: 30px;
+        display: block;
+        cursor: pointer;
+        overflow: hidden;
+
+        .progress {
+          height: 100%;
+          background-color: var(--accent-color);
+        }
+      }
+    }
+  }
+}
