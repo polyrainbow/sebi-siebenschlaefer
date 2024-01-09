@@ -1,8 +1,7 @@
 const SYMBOLS = {
-  PLAY: '⏵',
-  PAUSE: '⏸',
-  STOP: '⏹',
-}
+  PLAY: 'images/play.svg',
+  PAUSE: 'images/pause.svg',
+};
 
 const tracks = [
   {
@@ -128,9 +127,9 @@ const renderTrack = (track, parent, player, index) => {
     }
   });
   main.appendChild(playButton);
-  const buttonSpan = document.createElement('span');
-  buttonSpan.textContent = SYMBOLS.PLAY;
-  playButton.appendChild(buttonSpan);
+  const buttonImg = document.createElement('img');
+  buttonImg.src = SYMBOLS.PLAY;
+  playButton.appendChild(buttonImg);
 
   const title = document.createElement('h3');
   title.textContent = (index + 1) + ". " + track.title;
@@ -155,15 +154,15 @@ const player = document.querySelector('#player');
 const playAlbumButton = document.querySelector('#play-album-button');
 const trackElements = renderTracks(tracks, tracksEl, player);
 const playButtons = document.querySelectorAll('.track .main button');
-const buttonSpans = document.querySelectorAll('.track .main button span');
+const buttonImages = document.querySelectorAll('.track .main button img');
 const titles = document.querySelectorAll('.track main h3');
 
 const setPlayButtonState = (index) => {
-  buttonSpans.forEach((buttonSpan, buttonSpanIndex) => {
-    if (buttonSpanIndex === index) {
-      buttonSpan.textContent = SYMBOLS.PAUSE;
+  buttonImages.forEach((buttonImg, buttonImgIndex) => {
+    if (buttonImgIndex === index) {
+      buttonImg.src = SYMBOLS.PAUSE;
     } else {
-      buttonSpan.textContent = SYMBOLS.PLAY;
+      buttonImg.src = SYMBOLS.PLAY;
     }
   });
 };

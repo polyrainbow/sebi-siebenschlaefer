@@ -136,10 +136,9 @@ audio {
         border: none;
         border-radius: 50px;
 
-        span {
-          font-size: 26px;
-          line-height: 0.8em;
+        img {
           align-self: center;
+          filter: invert();
         }
       }
     
