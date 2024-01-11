@@ -59,6 +59,10 @@ p, a, span {
   font-family: 'Fraunces';
 }
 
+.service-link {
+  font-size: x-large;
+}
+
 #page-title {
   font-size: min(3.6em, 7.6vw);
   margin: 0;
